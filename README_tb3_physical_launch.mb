@@ -1,0 +1,15 @@
+The purpose of tb3_physical_launch is to use a tb3, SLAM, and explore_lite to automatically explore and map an environment
+tb3_physical_launch is an adaptation of the tb3_simulation_launch file provided by the tb3 tutorial.
+In order for tb3_physical launch to be able to run you must first have:
+- ROS2 Foxy Installed: https://docs.ros.org/en/foxy/Installation.html
+- NAV2 and tb3 simulation: https://navigation.ros.org/getting_started/index.html#installation
+- m-exploreinstalled found here: https://github.com/robo-friends/m-explore-ros2
+
+then take the tb3_physical_launch and add it to /opt/ros/foxy/share/nav2_bringup/launch (using sudo)
+
+To then launch the process:
+- SSH into the tb3
+- specify the model
+- run: the standard tb3 bringup found here: https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup
+- run: ros2 launch nav2_bringup tb3_physical_launch.py
+- run: ros2 launch explore_lite explore.launch.py
